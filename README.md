@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+This project sets up a development environment for a React app using Docker.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prerequisite
 
-## Available Scripts
+- git is required to clone the repository from github: https://github.com/git-guides/install-git
+- Docker is required to build and run the application: https://docs.docker.com/engine/
 
-In the project directory, you can run:
+## How to Run the App
 
-### `npm start`
+1. You can clone the Repository through git with:
+   `bash git clone https://github.com/aaaventura/code-assignment-13`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Change to the directory with:
+   `cd code-assignment-13`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Build the docker application into a container image:
+   `docker build -t ventura_ahleeryan-joe_assignment13 .`
 
-### `npm test`
+4. Run the application on localhost:8083:
+   `docker run -p 8018:8018 ventura_ahleeryan-joe_assignment13`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. To verify your build, open your browser and visit:
+   `http://localhost:8018`
 
-### `npm run build`
+   If you are successful in your build, you will see the spinning React App logo and the header "Edit src/App.tsx and save to reload."
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. To verify your storybook, run it using `npm run storybook`, open your browser and visit:
+   `http://localhost:6006`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   This should present the storybook UI with all the components according to the assignment's requirements.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## troubleshooting
 
-### `npm run eject`
+- Double check the version of Node.js with: `node -v`
+  The application uses the Node.js version 20.19.2.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  To switch versions, use: `nvm use 20`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- If Docker says the port is in use, use `bash docker ps` to display all currently running containers.
+  Then use `docker stop <container_using_8083>`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+          Note: root Access may be required to terminate other containers.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- A reoccuring error is Docker not installing the correct npm version. To fix this error, manual install will be required.
+  Use `npm install` and then try step 4 again.
 
-## Learn More
+- A reoccuring error is Docker not installing storybook. To fix this error, manual install will be required.
+  Use `npm create storybook@latest`, follow the recommended installation, and then try step 6 again.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- A reoccuring error is Docker not installing husky. To fix this error, manual install will be required.
+  Use `npm install husky@4.3.0`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- A reoccuring error is Docker not installing prettier. To fix this error, manual install will be required.
+  Use `npm install prettier`
