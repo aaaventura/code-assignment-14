@@ -1,54 +1,16 @@
-This project sets up a development environment for a React app using Docker.
+# React + Vite
 
-## Prerequisite
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- git is required to clone the repository from github: https://github.com/git-guides/install-git
-- Docker is required to build and run the application: https://docs.docker.com/engine/
+Currently, two official plugins are available:
 
-## How to Run the App
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-1. You can clone the Repository through git with:
-   `bash git clone https://github.com/aaaventura/code-assignment-14`
+## React Compiler
 
-2. Change to the directory with:
-   `cd code-assignment-14`
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-3. Build the docker application into a container image:
-   `docker build -t ventura_ahleeryan-joe_assignment14 .`
+## Expanding the ESLint configuration
 
-4. Run the application on localhost:5575:
-   `docker run -p 5575:5575 ventura_ahleeryan-joe_assignment14`
-
-5. To verify your build, open your browser and visit:
-   `http://localhost:5575`
-
-   If you are successful in your build, you will see the spinning React App logo and the header "Edit src/App.tsx and save to reload."
-
-6. To verify your storybook, run it using `npm run storybook`, open your browser and visit:
-   `http://localhost:6006`
-
-   This should present the storybook UI with all the components according to the assignment's requirements.
-
-## troubleshooting
-
-- Double check the version of Node.js with: `node -v`
-  The application uses the Node.js version 20.19.2.
-
-  To switch versions, use: `nvm use 20`
-
-- If Docker says the port is in use, use `bash docker ps` to display all currently running containers.
-  Then use `docker stop <container_using_8083>`
-
-          Note: root Access may be required to terminate other containers.
-
-- A reoccuring error is Docker not installing the correct npm version. To fix this error, manual install will be required.
-  Use `npm install` and then try step 4 again.
-
-- A reoccuring error is Docker not installing storybook. To fix this error, manual install will be required.
-  Use `npm create storybook@latest`, follow the recommended installation, and then try step 6 again.
-
-- A reoccuring error is Docker not installing husky. To fix this error, manual install will be required.
-  Use `npm install husky@4.3.0`
-
-- A reoccuring error is Docker not installing prettier. To fix this error, manual install will be required.
-  Use `npm install prettier`
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
