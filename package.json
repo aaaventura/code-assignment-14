@@ -43,6 +43,10 @@
     "@fortawesome/react-fontawesome": "^3.1.0",
     "animate.css": "^4.1.1",
     "gsap-trial": "^3.12.7",
-    "loaders.css": "^0.1.2"
+    "loaders.css": "^0.1.2",
+    "react-leaflet": "^5.0.0",
+    "react-loaders": "^3.0.1",
+    "react-router-dom": "^7.9.5",
+    "sass": "^1.94.0"
   }
 }
