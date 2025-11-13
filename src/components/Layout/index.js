@@ -1,6 +1,5 @@
 import './index.scss'
 import Sidebar from '../Sidebar'
-import { Outlet } from 'react-router-dom'
 import AboutMe from '../AboutMe'
 import Information from '../Information'
 import Portfolio from '../Portfolio'
