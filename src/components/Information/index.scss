@@ -1,0 +1,47 @@
+.double-side-container {
+  display: flex;              
+  justify-content: space-evenly; 
+  align-items: flex-start;    
+  gap: 2rem;                  
+  padding: 2rem;
+  padding-left: 50px;
+}
+
+.language-list, .dev-setup {
+  flex: 1;                    
+  max-width: 500px;     
+  margin: 20px 0px 0px 20px;
+  background-color: #fef5ef; 
+  height: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.language-list h1 {
+  font-size: 1.6rem;
+  color: #303a2b;
+}
+
+.dev-setup p{
+  text-align: left;   
+  color: #303a2b;
+  
+  
+}
+.dev-setup h1 {
+  font-size: 2.3rem;
+  color: #303a2b;
+  }
+
+
+.language-list ul {
+  list-style-type: disc;     
+  padding-left: 1.5rem;       
+  text-align: left;    
+  color: #303a2b;
+}
+
+.language-list li {
+  margin-bottom: 0.5rem;    
+  color: #303a2b;
+}
+

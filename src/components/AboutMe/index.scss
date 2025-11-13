@@ -1,4 +1,25 @@
 .basic-header-container {
-	backgroun-color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fef5ef; 
+  color: #333;
 
+  .title-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    padding-left: 50px;
+    text-transform: uppercase;
+    color: #303a2b;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 50px;
+    line-height: 1.6;
+    color: #303a2b;
+  }
 }

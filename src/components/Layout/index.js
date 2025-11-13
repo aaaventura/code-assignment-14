@@ -2,32 +2,17 @@ import './index.scss'
 import Sidebar from '../Sidebar'
 import { Outlet } from 'react-router-dom'
 import AboutMe from '../AboutMe'
+import Information from '../Information'
+import Portfolio from '../Portfolio'
 
 const Layout = () => {
 
     return (
             <div className="App">
                 <Sidebar />
-                
-                <div className='page'>
-                    <span className='tags top-tags'>&lt;body&gt; </span>
-                    
-                    <Outlet />
-                    
-                    <AboutMe />
-                    
-                    <span className='tags bottom-tags'>
-                        &lt;body&gt; 
-                        
-                        <br />
-                        <span className='bottom-tags-html'>&lt;/html&gt; </span>
-                    </span>
-                    
-                
-                </div>
-                
-                
-                
+                <AboutMe />
+                <Information />    
+                <Portfolio />
             </div>
         )
 
