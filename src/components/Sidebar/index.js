@@ -12,13 +12,23 @@ const Sidebar = () => (
                 <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
             </NavLink>
        
-            <NavLink exact="true" activeclassname="active" className="about-link" to="https://github.com/aaaventura">
+            <a 
+                href="https://github.com/aaaventura" 
+                className="about-link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
                 <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-            </NavLink>
+            </a>
        
-            <NavLink exact="true" activeclassname="active" className="contact-link" to="https://www.linkedin.com/in/ahleeryan-joe-ventura-209a49398/">
+            <a 
+                href="https://www.linkedin.com/in/ahleeryan-joe-ventura-209a49398/" 
+                className="contact-link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+            >
                 <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-            </NavLink>
+            </a>
         </nav>
     </div>
 
