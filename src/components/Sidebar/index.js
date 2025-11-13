@@ -1,0 +1,34 @@
+import './index.scss'
+import { Link, NavLink } from 'react-router-dom'
+import LogoS from '../../assets/images/logo-s.png'
+import LogoSubtitle from '../../assets/images/logo_sub.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
+const Sidebar = () => (
+    <div className='nav-bar'>   
+        <Link className='logo' to='google.ca'>
+            <img src={LogoS} alt="logo" />
+            <img className='sub-logo' src={LogoSubtitle} alt="logosubtitle" />
+        </Link>
+        
+        
+        <nav>
+            <NavLink exact="true" activeclassname="active" to="/">
+                <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+            </NavLink>
+       
+            <NavLink exact="true" activeclassname="active" className="about-link" to="https://github.com/aaaventura">
+                <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+            </NavLink>
+       
+            <NavLink exact="true" activeclassname="active" className="contact-link" to="https://www.linkedin.com/in/ahleeryan-joe-ventura-209a49398/">
+                <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+            </NavLink>
+        </nav>
+    </div>
+
+)
+
+
+export default Sidebar
