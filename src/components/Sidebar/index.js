@@ -7,11 +7,6 @@ import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const Sidebar = () => (
     <div className='nav-bar'>   
-        <Link className='logo' to='google.ca'>
-            <img src={LogoS} alt="logo" />
-            <img className='sub-logo' src={LogoSubtitle} alt="logosubtitle" />
-        </Link>
-        
         
         <nav>
             <NavLink exact="true" activeclassname="active" to="/">
