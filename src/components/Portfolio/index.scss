@@ -2,35 +2,37 @@
 
 
 .portfolio-container {
+  height: 100%;
   display: flex;
-  justify-content: center;   // center the card horizontally
+  justify-content: center;  
   margin: 2rem 0;
   margin-left: 100px;
   margin-right: 40px;
+  
 }
 
 .display-container {
-  background: #ffffff;       // white card background
-  border-radius: 12px;       // rounded corners
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); // subtle shadow
+  background: #ffffff;      
+  border-radius: 12px;       
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
   padding: 2rem;
-  max-width: 600px;          // keep card neat
+  max-width: 600px;          
   text-align: left;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
+  
+  background-color: #fef5ef;
   
 
   h1 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: #303a2b;
   }
 
   p {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    color: #555;
+    color: #303a2b;
   }
 }
 
@@ -41,22 +43,22 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #3498db;   // button background
-  color: #fff;                 // text color
-  border: none;                // remove default border
-  border-radius: 6px;          // rounded corners
+  background-color: #3498db;   
+  color: #fff;                
+  border: none;                
+  border-radius: 6px;        
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: #2980b9; // darker on hover
-    transform: translateY(-2px); // subtle lift effect
+    background-color: #2980b9; 
+    transform: translateY(-2px); 
   }
 
   &:active {
-    transform: translateY(0); // reset when clicked
+    transform: translateY(0); 
   }
 
   svg {
