@@ -44,11 +44,4 @@ This project sets up a development environment for a React app using Docker.
 - A reoccuring error is Docker not installing the correct npm version. To fix this error, manual install will be required.
   Use `npm install` and then try step 4 again.
 
-- A reoccuring error is Docker not installing storybook. To fix this error, manual install will be required.
-  Use `npm create storybook@latest`, follow the recommended installation, and then try step 6 again.
 
-- A reoccuring error is Docker not installing husky. To fix this error, manual install will be required.
-  Use `npm install husky@4.3.0`
-
-- A reoccuring error is Docker not installing prettier. To fix this error, manual install will be required.
-  Use `npm install prettier`
