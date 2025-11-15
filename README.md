@@ -22,7 +22,7 @@ This project sets up a development environment for a React app using Docker.
 5. To verify your build, open your browser and visit:
    `http://localhost:5575`
 
-   If you are successful in your build, you will see the spinning React App logo and the header "Edit src/App.tsx and save to reload."
+   If you are successful in your build, you will see the portfolio site.
 
 ## troubleshooting
 
@@ -32,7 +32,7 @@ This project sets up a development environment for a React app using Docker.
   To switch versions, use: `nvm use 20`
 
 - If Docker says the port is in use, use `bash docker ps` to display all currently running containers.
-  Then use `docker stop <container_using_8083>`
+  Then use `docker stop <container_using_5575>`
 
           Note: root Access may be required to terminate other containers.
 
